@@ -5,4 +5,3 @@ sq = n ** 0.5
 print("Hexadecimal value of ", n , "is : ", h)
 print("Octal value of ", n , "is : ", o)
 print("Square root of ", n , "is : ", sq)
-print("Thanks")
