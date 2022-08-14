@@ -9,4 +9,4 @@ if n1 > n2:
 elif n2 > n3:
     print(n2, "Is the greatest of the three.")
 else:
-    print("All the three numbers are equal")
+    print("All the three numbers are equal.")
