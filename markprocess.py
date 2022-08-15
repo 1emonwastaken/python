@@ -9,11 +9,14 @@ avg = total / 5
 print("Name of candidate : ", name)
 print("Total marks : ", total)
 print("Average : " , avg)
-if avg >= 90:
-    print("Grade A " + "\nPass")
-elif avg >= 75 and avg < 90:
-    print("Grade B " + "\nPass")
-elif avg >= 40 and avg < 75:
-    print("Grade C " + "\nPass")
+if math >= 40 and phy >= 40 and chem >=40 and eng >= 40 and csi >= 40:
+    if avg >= 90:
+        print("Grade A " + "\nPass")
+    elif avg >= 75 and avg < 90:
+        print("Grade B " + "\nPass")
+    elif avg >= 40 and avg < 75:
+        print("Grade C " + "\nPass")
+    else:
+        print("Grade D " + "\nPass")
 else:
-    print("Grade D" + "\nFail")
+    print("Fail")
