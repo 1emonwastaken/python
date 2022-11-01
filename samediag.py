@@ -1,7 +1,7 @@
 def istrue(x: list):
     for i in x:
         if i == False:
-            return False                                          #FUNCTION TO CHECK IF ALL DIAGONALS SATISFY CONDITION
+            return False                                         
             break
     else:
         return True
@@ -9,14 +9,13 @@ def istrue(x: list):
 
 l = eval(input("Enter list"))
 for i in range(len(l)):
-    for j in range(len(l)):                                       #PRINTING THE ORIGINAL MATRIX
+    for j in range(len(l)):                                       
         print(l[i][j], end = " ")
     print()
 
+lst2=[]                                                           
 
-lst2=[]                                                           #LIST TO STORE TRUE/FALSE VALUES FOR SAME DIAGONAL
-
-for k in range(len(l)):                                           #CHECKING IF DIAGONALS ARE SAME
+for k in range(len(l)):                                           
     lst=[]
     for i in range(len(l)):
         for j in range(len(l)):
@@ -24,24 +23,23 @@ for k in range(len(l)):                                           #CHECKING IF D
                 if l[i][j] not in lst:
                     lst.append(l[i][j])
     if len(lst)==1:
-        lst2.append(True)                                          #IF SAME NUMBERS IN ONE DIAGONAL: LST2 HAS TRUE
+        lst2.append(True)                                          
     else:
-        lst2.append(False)                                         #IF SAME NUMBERS NOT IN ONE DIAGONAL: LST2 HAS TRUE
-print(istrue(lst2))                                                #IF LST2 HAS ALL TRUE, PROGRAM PRINTS TRUE. IF LST2 HAS EVEN ONE FALSE, PROGRAM PRINTS FALSE
+        lst2.append(False)
+                                         
+print(istrue(lst2))                                                
 
 
+
 '''
-INPUT: 
-1 2 3 4 
-2 4 2 3
-3 2 5 2
-4 3 2 6
-OUTPUT: FALSE
-'''
-'''
-1 2 3 4
-2 1 2 3
-3 2 1 2
-4 3 2 1
-OUTPUT: TRUE
+For matrix of size m x n:
+def istrue(l:list)
+for i in range(1,len(l)):
+    for j in range(1,len(l[0])):
+        if l[i][j]==l[i-1][j-1]:
+            pass
+        else:
+            return False
+        return True
+
 '''
