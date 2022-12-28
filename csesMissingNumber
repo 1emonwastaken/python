@@ -1,3 +1,0 @@
-n = int(input())
-l = input()
-print((n*(n+1))//2-sum([int(i) for i in l.split()]))
