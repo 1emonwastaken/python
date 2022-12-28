@@ -6,4 +6,4 @@ for i in range(n):
     a+=3
     b+=4
     sign*=-1
-print(lst)
+print(lst) 
