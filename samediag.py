@@ -41,5 +41,5 @@ for i in range(1,len(l)):
         else:
             return False
         return True
-
+ 
 '''
