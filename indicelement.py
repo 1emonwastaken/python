@@ -5,3 +5,5 @@ for i in range(tc):
 for j in range(len(lst)):
     print("Element : ", lst[j])
     print("Index : ", j )
+
+    
