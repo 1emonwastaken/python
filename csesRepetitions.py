@@ -8,4 +8,4 @@ for i in range(1,len(s)):
             ans = crt
     else:
         crt=1
-print(ans)
+print(ans) 
