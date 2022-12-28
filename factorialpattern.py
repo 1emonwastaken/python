@@ -9,3 +9,4 @@ for i in range(1,n+1):
     sum+=fac*sign
     sign*=-1
 print(sum)
+ 
