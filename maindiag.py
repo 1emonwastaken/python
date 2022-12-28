@@ -7,3 +7,4 @@ for i in range(len(l)):                  # with two loops(dont use much)
     for j in range(len(l)):
         if i == j:
             print(l[i][j])
+ 
