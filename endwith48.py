@@ -4,4 +4,4 @@ if n%10 == 4:
 elif n%10 == 8:
     print("The number ends with 8")
 else:
-    print("The number ends with neither 4 nor 8.")
+    print("The number ends with neither 4 nor 8.") 
