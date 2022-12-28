@@ -6,4 +6,4 @@ for i in lst1:
         lst3.append(i)
     else:
         pass
-print(lst3) 
+print(lst3)  
