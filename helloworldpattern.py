@@ -6,9 +6,3 @@ for i in range(len(s)//2):
     for k in range((len(s)-2)-(i*2)):
         print(' ', end ="")
     print(s[i*2+1])
-
-
-
-
-    
-
