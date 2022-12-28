@@ -4,4 +4,4 @@ sum = 0
 while i<len(lst):
     sum+=lst[i]
     i+=1
-print("Sum of all elements  : ", sum)
+print("Sum of all elements  : ", sum) 
