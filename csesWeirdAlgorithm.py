@@ -5,4 +5,4 @@ while n != 1:
         n//=2
     else:
         n = (n*3)+1
-    print(n, end = " ")
+    print(n, end = " ") 
