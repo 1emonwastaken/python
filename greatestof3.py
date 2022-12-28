@@ -7,6 +7,6 @@ if n1 > n2:
     else:
         print(n3, "is the greatest of the three.")
 elif n2 > n3:
-    print(n2, "Is the greatest of the three.")
+    print(n2, "Is the greatest of the three.") 
 else:
     print("All the three numbers are equal.")
