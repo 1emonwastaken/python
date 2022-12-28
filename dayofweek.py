@@ -14,4 +14,4 @@ elif n == 6:
 elif n == 7:
     print("Saturday")
 else:
-    print("Invalid input")
+    print("Invalid input") 
