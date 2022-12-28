@@ -16,4 +16,4 @@ elif avg >= 40 and avg < 50:
     print("Grade : Third Division")
 else: 
     print("Fail")
-    
+     
