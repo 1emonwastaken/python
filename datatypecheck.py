@@ -6,4 +6,4 @@ elif a >= "a" and a <= "z":
 elif a >= "0" and a <= "9":
     print("Entered character is a integer")
 else:
-    print("Unrecognized character.")
+    print("Unrecognized character.")  
