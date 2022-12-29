@@ -1,13 +1,11 @@
 from random import *
 from tkinter import *
-import os
 root = Tk()
 frame = Frame(root, bg = "#73706f")
 frame.pack(ipadx = 20)
 root.title("Wordle Remake")
 Guess = ""
-os.chdir(r"D:\Documents")
-with open("wordle_words.txt.txt", "r") as f:
+with open("wordle_words.txt", "r") as f:
     words = f.read().splitlines()
 
 letter_input = []                                  #Store "address" of buttons, to change color.
