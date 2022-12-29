@@ -5,7 +5,7 @@ frame = Frame(root, bg = "#73706f")
 frame.pack(ipadx = 20)
 root.title("Wordle Remake")
 Guess = ""
-with open("wordle_words.txt", "r") as f:
+with open("wordle_words.txt", "r") as f:            #File with all possible 5 letter english words
     words = f.read().splitlines()
 
 letter_input = []                                  #Store "address" of buttons, to change color.
