@@ -11,4 +11,4 @@ else:
     tax = (inc - 500001) * 0.3
 print("Tax payable : ", tax)
     
-    
+       
