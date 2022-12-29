@@ -1,13 +1,18 @@
 from random import *
 from tkinter import *
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 root = Tk()
+
+
 frame = Frame(root, bg = "#73706f")
 frame.pack(ipadx = 20)
 root.title("Wordle Remake")
+
+
 Guess = ""
 with open("wordle_words.txt", "r") as f:            #File with all possible 5 letter english words
     words = f.read().splitlines()
-
 letter_input = []                                  #Store "address" of buttons, to change color.
 active_lettercount = 0                             #Keep track of lines
 result = False
@@ -31,13 +36,12 @@ def Guess_Checker(Guess):                   #FUNCTION TO CHECK THE GUESS
             if (guess_list[i][1] == answer_list[j][1] == 0) and (guess_list[i][0] == answer_list[j][0]):
                 letter_input[i+active_lettercount-5]["bg"] = "#a3a334"
                 answer_list[j][1] = 1
-    
-
-
 
     if Guess == Answer:                            
         result = True           #IF GUESS IS ANSWER, RUN winner()
         winner()
+
+
 
 def winner():
     global winner_frame
@@ -51,9 +55,13 @@ def winner():
     replay.grid(column = 2)
     
 
+
+
 def winner2():
     winner_frame.destroy()                                               #Makeshift function to delete endgame frame
     window()
+
+
 
 def loser():
     global loser_frame
@@ -66,9 +74,14 @@ def loser():
     replay2 = Button(loser_frame, text = "New Game", command = loser2)
     replay2.grid(column = 2)
 
+
+
 def loser2():
     loser_frame.destroy()                                                #Makeshift function to delete loser frame 
     window()
+
+
+
 
 def key_binder(event):
     global active_lettercount, Guess
@@ -82,17 +95,31 @@ def key_binder(event):
                     pass
                 else:
                     loser()                                       
-            Guess_Checker(Guess)                                #At end of line, run Guess_Checker() to evaluaute guess
-            Guess = ""
+
+
+
+def enter(event):
+    global Guess
+    if active_lettercount%5 == 0:
+        Guess_Checker(Guess)
+        Guess = ""
+
 
 def backspace(event):
-    global active_lettercount
-    if active_lettercount%5 != 0:                                    #Backspace functionality
+    global active_lettercount, Guess
+    if Guess != "":                         #Backspace functionality
         letter_input[active_lettercount]["text"] = ""
         active_lettercount -= 1
+        Guess=Guess[:-1]
+
+
+
 
 root.bind("<BackSpace>", backspace)
 root.bind("<Key>", key_binder)                                             #Event bind
+root.bind("<Return>", enter)
+
+
 
 def window():    
     global frame, active_lettercount, result, Answer
@@ -108,6 +135,9 @@ def window():
             Input_Button = Button(frame, text = "", width = 7, height = 4, bg = "#373b39", fg = "#ffffff", font = ("Times", 15))
             Input_Button.grid(row = i, column = j, padx = 3, pady = 3)
             letter_input.append(Input_Button)
+
+
+
 
 window()
 Menubar = Menu(root)
